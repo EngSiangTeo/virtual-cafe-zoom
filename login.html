@@ -28,11 +28,11 @@
             </style>
             <div class="container">
                 <div class="info">
-                    <img src="${user_data.pic_url}" alt="User photo" />
+                    <img src="${user_data.user_info.pic_url}" alt="User photo" />
                     <div>
                         <span>Hello World!</span>
-                        <h2>${user_data.first_name} ${user_data.last_name}</h2>
-                        <p>${user_data.role_name}, ${user_data.company}</p>
+                        <h2>${user_data.user_info.first_name} ${user_data.user_info.last_name}</h2>
+                        <p>${user_data.user_info.role_name}, ${user_data.user_info.company}</p>
                     </div>
                 </div>
                 <div class="response">
