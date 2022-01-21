@@ -4,13 +4,26 @@
   <title>Virtual Cafe</title>
   <!-- Common Script -->
   <script src="js/common.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="text/javascript">
     var urlObject = new URL(document.location.href);
     var params = urlObject.searchParams;
     var code = params.get("code");
     // console.log(code);
     if (code){
-      alert(code);
+      axios({
+        method: 'post',
+        url: backend_host + 'user/login',
+        data: {
+          "code" : code
+        }
+      })
+      .then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      });
+
     } else {
       document.location.href="/";
     }
