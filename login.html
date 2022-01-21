@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Cafe</title>
+  <!-- Common Script -->
+  <script src="js/common.js"></script>
+  <script type="text/javascript">
+    var urlObject = new URL(document.location.href);
+    var params = urlObject.searchParams;
+    var code = params.get("code");
+    // console.log(code);
+    if (code){
+      alert(code);
+    } else {
+      document.location.href="/";
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
